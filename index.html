@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chat personal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' />
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+
+  <div class="center">
+
+      <!-- Inputs y Forms -->
+      <form class="form" onsubmit="">
+        <input placeholder="Tu nombre" type="text" />
+      </form>
+
+
+    </div>
+  </div>
+
+
+  <script>
+
+    const form = document.querySelector('.form');
+    const input = document.querySelector('input');
+
+    form.addEventListener( 'submit', (e) => {
+      e.preventDefault();
+      const name = input.value;
+      if ( name ) {
+        localStorage.setItem('name', name);
+        window.location.href = 'chat.html';
+      }
+    })
+
+
+  </script>
+
+
+</body>
+
+</html>
